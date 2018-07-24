@@ -15,21 +15,18 @@ import { DataProvider } from './../../providers/data/data';
 })
 export class HomePage {
   Places
-  humidity
-  pressure
-  description
   info;
   infoList ;
   //num = 0;
     constructor(public navCtrl: NavController, public navParams: NavParams, private data: DataProvider) {
-     
+
     }
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
 
-  onSubmit(data: DataProvider){
+  onSubmit(selectedValue: any){
     if(this.Places === "p")
     {
       this.data.getInformation().subscribe(data=> {
@@ -45,8 +42,9 @@ export class HomePage {
         this.infoList = this.info.data;
       });
     }
-      
-    
+
   }
+
+
 
 }

@@ -17,15 +17,15 @@
 
     <ion-item>
         <ion-label>Select City</ion-label>
-        <ion-select [(ngModel)]="Places">
+        <ion-select [(ngModel)]="Places" (ionChange)="onSubmit()">
           <ion-option value="p">Pretoria</ion-option>
           <ion-option value="j">Johannesburg</ion-option>
         </ion-select>
       </ion-item>
 <br>
-<br>
+<!-- <br>
       <button ion-button id="low" stacked (click)="onSubmit(data)">Submit</button>
-<br>
+<br> -->
 <br>
 
       <ion-grid>
