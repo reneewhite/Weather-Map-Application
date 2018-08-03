@@ -14,16 +14,15 @@ export class DataProvider {
     console.log('Hello DataProvider Provider');
   }
 
-  getInformation(){
-    return this.http.get('http://api.openweathermap.org/data/2.5/weather?q=pretoria&APPID=3b80f62b909380edd4a0b8f6bd4bc105');
+  getInformation(place:string){
+    return this.http.get('http://api.openweathermap.org/data/2.5/weather?q='+place+'&APPID=3b80f62b909380edd4a0b8f6bd4bc105');
 
     
 }
 
-getInformationJhb(){
-  return this.http.get('http://api.openweathermap.org/data/2.5/weather?q=johannesburg&APPID=3b80f62b909380edd4a0b8f6bd4bc105');
-
-  
+getData(){
+  return this.http.get('http://api.openweathermap.org/data/2.5/weather?q=pretoria&APPID=3b80f62b909380edd4a0b8f6bd4bc105'); 
 }
+
 
 }

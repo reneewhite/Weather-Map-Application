@@ -1,1 +1,16 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+<ion-menu [content]="mycontent">
+  <ion-content>  
+  <ion-list no-lines>
+        <button ion-button style="background-color: transparent; color:olivedrab" (click)="onPageOne()">
+            Version 1
+        </button> 
+        <br>
+        <button ion-button style="background-color: transparent; color:olivedrab" (click)="onPageTwo()">
+            Version 2
+           </button> 
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-nav #mycontent [root]="rootPage"></ion-nav>

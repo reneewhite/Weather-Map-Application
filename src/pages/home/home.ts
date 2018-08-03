@@ -29,20 +29,24 @@ export class HomePage {
   onSubmit(selectedValue: any){
     if(this.Places === "p")
     {
-      this.data.getInformation().subscribe(data=> {
+      this.data.getData().subscribe(data=> {
         this.info = data;
         console.log(this.info);
         this.infoList = this.info.data;
       });
     }else if(this.Places === "j")
     {
-      this.data.getInformationJhb().subscribe(data=> {
+      this.data.getData().subscribe(data=> {
         this.info = data;
         console.log(this.info);
         this.infoList = this.info.data;
       });
     }
 
+  }
+
+  onPageTwo(){
+    this.navCtrl.push("FirstPage");
   }
 
 

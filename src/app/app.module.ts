@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -12,11 +13,14 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     MyApp
+    
+    
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -26,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DataProvider
+    DataProvider,
+    
   ]
 })
 export class AppModule {}

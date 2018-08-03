@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar  color="danger">
-    <ion-title style="text-align: center">Weather Map JSON</ion-title>
+  <ion-navbar  color="grey">
+    <ion-title style="text-align: center">Weather Map</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,7 +16,7 @@
 <ion-content padding>
 
     <ion-item>
-        <ion-label>Select City</ion-label>
+        <ion-label>Select city</ion-label>
         <ion-select [(ngModel)]="Places" (ionChange)="onSubmit()">
           <ion-option value="p">Pretoria</ion-option>
           <ion-option value="j">Johannesburg</ion-option>
@@ -30,14 +30,24 @@
 
       <ion-grid>
           <ion-row>
-            <ion-col style="background-color: #f53d3d"><b><h5>Humidity</h5></b></ion-col>
-            <ion-col style="background-color: pink"><b><h5>Pressure</h5></b></ion-col>
-            <ion-col style="background-color: #f53d3d"><b><h5>Temperature</h5></b></ion-col>
+            <ion-col style="background-color: olivedrab"><b><h5>Humidity</h5></b></ion-col>
+            <ion-col style="background-color: olivedrab"><b><h5>Pressure</h5></b></ion-col>
+            <ion-col style="background-color: olivedrab"><b><h5>Temperature</h5></b></ion-col>
           </ion-row>
           <ion-row>
-              <ion-col style="background-color: pink">{{info?.main.humidity}}</ion-col> 
-              <ion-col style="background-color: #f53d3d">{{info?.main.pressure}}</ion-col>
-              <ion-col style="background-color: pink">{{info?.main.temp}}</ion-col>
+              <ion-col style="background-color: rgb(56,56,56)">{{info?.main.humidity}}</ion-col> 
+              <ion-col style="background-color: rgb(56,56,56)">{{info?.main.pressure}}</ion-col>
+              <ion-col style="background-color: rgb(56,56,56)">{{info?.main.temp}}</ion-col>
             </ion-row>
+            <ion-row>
+                <ion-col style="background-color: rgb(56,56,56)">{{info?.wind.speed}}</ion-col> 
+                <ion-col style="background-color: rgb(56,56,56)">{{info?.coord.lat}}</ion-col>
+                <ion-col style="background-color: rgb(56,56,56)">{{info?.visibility}}</ion-col>
+              </ion-row>
         </ion-grid>
+        <br>
+        <br>
+        <button id= "low" ion-button style="background-color: olivedrab; text-align: center" (click)="onPageTwo() ">
+            Next
+           </button> 
 </ion-content>
